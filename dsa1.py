@@ -46,3 +46,27 @@ class Solution(object):
             tail.next = list2
         return dummy.next
 
+
+# shortest palindrome
+class Solution(object):
+    def shortestPalindrome(self, s):
+        result =''
+        for i in range(len(s),-1,-1):
+            if s[:i] == s[:i][::-1]:
+                suffix= s[i:]
+                return suffix[::-1]+s
+        return ''
+    
+
+# longest palindrome 
+class Solution(object):
+    def longestPalindrome(self,s):
+        result = ""
+        for i in range(len(s)):
+            for j in range(i, len(s)):
+                temp = s[i:j+1]
+                if temp == temp[::-1] and len(temp) > len(result):
+                    result = temp
+        return result
+
+
