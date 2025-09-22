@@ -58,15 +58,6 @@ class Solution(object):
         return ''
     
 
-# longest palindrome 
-class Solution(object):
-    def longestPalindrome(self,s):
-        result = ""
-        for i in range(len(s)):
-            for j in range(i, len(s)):
-                temp = s[i:j+1]
-                if temp == temp[::-1] and len(temp) > len(result):
-                    result = temp
-        return result
+
 
 
