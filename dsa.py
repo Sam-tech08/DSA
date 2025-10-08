@@ -49,3 +49,8 @@ class Sort_Solution:
                         
         return nums
     
+        
+    
+s = Sort_Solution()
+nums = [7,4,1,5,3]
+print(s.selectionsort(nums))
